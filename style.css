@@ -1,0 +1,464 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica" , normal;
+    line-height: 1.6;
+}
+
+
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    top: 15px;
+    right: 0;
+    padding: 15px;
+    width: 100%;
+   
+    background: transparent;
+
+}
+
+.navbar input{
+   opacity: 0;
+}
+
+
+.nav-links{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    transition: transform 0.3s ease;
+
+}
+
+
+.nav-links a{
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+.nav-links span{
+    display: none;
+    margin-right: 5px;
+
+}
+
+
+.hamburger{
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    margin-right: 0px;
+
+}
+
+.hamburger div{
+    width: 25px;
+    height: 3px;
+    background: rgb(255, 255, 255);
+    transition: transform 0.3s ease;
+
+}
+
+@media (max-width: 768px) {
+    .hamburger{
+        display: flex;
+        position: relative;
+        z-index: 2;
+
+    }
+
+    #menu-toggle{
+        display: none;
+
+    }
+
+    #menu-toggle:checked + .hamburger div:nth-child(1){
+        transform: rotate(45deg) translate(5px, 5px);
+        width: 32px;
+    }
+
+    #menu-toggle:checked + .hamburger div:nth-child(2){
+        opacity: 0;
+    }
+
+    #menu-toggle:checked + .hamburger div:nth-child(3){
+        transform: rotate(-47deg) translate(5px, -5px);
+        width: 30px;
+    }
+
+    .nav-links{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0px;
+        left: 30px;
+        background: #fff;
+        padding: 10px;
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+       
+    }
+
+    .nav-links li{
+        border-bottom: 1px solid rgb(145, 136, 136);
+        
+    }
+
+    #menu-toggle:checked ~ .nav-links{
+        display: flex;
+    }
+
+    .nav-links span{
+        display: inline-block;
+        color: #333;
+        font-weight: bolder;
+        padding-right: 10px;
+    
+    }
+
+    
+
+    .banner h1{
+        font-size: 2rem;
+
+    }
+
+    .banner p{
+        font-size: 0.9rem;
+
+    }
+    .row{
+        flex-direction: column;
+    }
+}
+
+
+.banner{
+    height:70vh;
+    width: 75%;
+    background: url(images/mainImg.jpg) center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    margin-left: 10%;
+    
+    
+}
+
+.banner h1{
+    font-size: 3rem;
+    font-family:"Lucida Handwriting" , cursive;
+}
+
+.banner p{
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .banner{
+        width: 100%;
+        margin-left: 0;
+    }
+    
+}
+
+
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.column{
+    flex: 1;
+   
+}
+
+.column h2{
+    margin-top:150px;
+    
+}
+
+.column img{
+    width: 100%;
+    height: auto;
+    
+}
+
+.column:not(:has(img)){
+    background: #f4f2f2;
+    text-align: center;
+    padding-bottom: 200px;
+
+}
+
+@media (max-width: 768px){
+    .row{
+        flex-direction: column;
+        
+    }
+
+   .second{
+    order: -1;
+   }
+
+   .column:not(:has(img)){
+    margin-top: -8px;
+    
+   }
+
+   .column p{
+    margin: 0 10px 0 10px;
+   }
+}
+
+
+
+.vision{
+    
+    padding: auto;
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 300px;
+
+}
+
+.vision h2{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.vision p{
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 10px 0;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+    .vision{
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    .vision h2{
+        font-size: 1.8rem;
+    }
+
+    .vision p{
+        font-size: 0.95rem;
+        margin-left: 130px;
+        margin-right: 130px;
+    }
+}
+
+.story{
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    margin: 1rem;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: auto;
+}
+
+.story-item{
+   flex: 1;
+    text-align: center;
+}
+
+.story-item img{
+    width: 80%;
+    height: 250px;
+    margin-bottom: 1rem;
+    
+}
+
+
+
+@media (max-width: 768px){
+    .story-item{
+        flex: 1 1;
+        margin-bottom: 1.5rem;
+        
+    }
+
+    .story-item img{
+        width: 100%;
+        height: auto;
+     
+    }
+    
+}
+
+.image-section{
+    position: relative;
+    height:50vh;
+    width: 100%;
+    background: url(images/bgSec04.jpg) center/cover no-repeat;
+    display: flex;
+    color: #fff;
+    margin-bottom: 80px;
+    
+}
+
+.image-text .column{
+    flex: 1;
+    text-align: center;
+    background: none;
+}
+
+.image-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    color: rgb(239, 238, 238) ;
+    width: 50%;
+}
+
+
+
+.image-text h2{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+
+}
+
+.image-text p{
+    font-size: 1rem;
+}
+
+
+@media (max-width: 768px) {
+    .image-section{
+        height: 100vh;
+        margin-bottom: 100px;
+        background-size: cover;
+
+    }
+
+    .image-text{
+        flex-direction: column;
+       
+        align-items: center;
+        gap: 0.5rem;
+        
+    }
+
+    .image-text .column{
+        width: 100%;
+        padding-top: 0.5rem;
+    }
+
+    .image-text h2{
+        font-size: 1.2rem;
+        margin-bottom: 0.3rem;
+
+    }
+
+    .image-text p{
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+        margin-left: -100px;
+        margin-right: -100px;
+    }
+
+
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-left:20%;
+}
+
+.info{
+    width: 100%;
+    
+}
+.info p {
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    line-height: 2rem;
+}
+
+.info s{
+    flex: 0 0 40%;
+    text-align: right;
+    padding-right: 30px;
+}
+
+.info span{
+    flex: 1;
+    text-align: left;
+}
+
+.map{
+    width: 50%;
+
+}
+iframe{
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+@media (max-width: 768px){
+    .container{
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .info{
+        width: 100%;
+        margin-bottom: 40px;
+    } 
+    
+    .map{
+        width: 100%;
+       
+    }
+
+    iframe{
+        height: 400px;
+    }
+
+}
+
+
+footer{
+   text-align: center;
+   margin-top: 250px;
+ 
+}
+
+@media (max-width: 768px){
+    footer{
+        margin-top: 30%;
+        margin-left: 5%;
+        width: 90%;
+    }
+}
